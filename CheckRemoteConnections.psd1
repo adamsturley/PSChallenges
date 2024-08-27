@@ -12,11 +12,11 @@
 
 function Get-Remoting {
     param (
-    [Parameter(Mandatory=$true)]
-    [String]$ComputerName,
+        [Parameter(Mandatory=$true)]
+        [String]$ComputerName,
 
-    [Parameter(Mandatory=$true)]
-    [pscredential]$Credential
+        [Parameter(Mandatory=$true)]
+        [pscredential]$Credential
     )
 
     New-PSSession -ComputerName $ComputerName -Credential $Credential
@@ -32,8 +32,4 @@ function Export-RemotingResult {
         [Parameter(Position=1,Mandatory=$true)]
         $Path
     )
-
-
-
-
 }
